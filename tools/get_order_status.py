@@ -2,12 +2,13 @@ import json
 import os
 from typing import Any, Dict, Optional
 
-from ._shared import ROOT
+from ._shared import ROOT, log_tool_call
 
 
 ORDERS_PATH = os.path.join(ROOT, "data", "orders", "orders.json")
 
 
+@log_tool_call
 def get_order_status(order_id: str) -> Optional[Dict[str, Any]]:
     if not os.path.exists(ORDERS_PATH):
         return None

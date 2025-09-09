@@ -1,3 +1,27 @@
-[]
-
-
+[
+  {
+    "orderId": "135228ef",
+    "items": [
+      {
+        "quantity": 1,
+        "sku": "HP-AUR-100-BLK"
+      }
+    ],
+    "destinationCity": "New York",
+    "destinationCountry": "US",
+    "breakdown": {
+      "totalCents": 14037,
+      "discount": 6.5,
+      "tax": 9.88,
+      "subtotal": 129.99,
+      "shippingCents": 700,
+      "shipping": 7,
+      "discountCents": 650,
+      "subtotalCents": 12999,
+      "taxCents": 988,
+      "total": 140.37
+    },
+    "status": "received",
+    "createdAt": "2025-09-09T20:22:44Z"
+  }
+]

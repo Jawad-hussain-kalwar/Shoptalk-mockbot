@@ -5,12 +5,6 @@ from dotenv import load_dotenv
 from google import genai
 
 
-SYSTEM_PROMPT = (
-    "You are ShopTalk, a concise shopping assistant. Always be brief and clear. "
-    "Use tools when needed. Do not place an order unless the user confirms after an estimate."
-)
-
-
 class GeminiClient:
     def __init__(self, model_name: str = "gemini-2.0-flash-001") -> None:
         load_dotenv()

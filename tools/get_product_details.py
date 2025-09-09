@@ -1,8 +1,9 @@
 from typing import Any, Dict, Optional
 
-from ._shared import load_catalog, _find_product_by_id
+from ._shared import load_catalog, _find_product_by_id, log_tool_call
 
 
+@log_tool_call
 def get_product_details(product_id: str) -> Optional[Dict[str, Any]]:
     products = load_catalog()
     product = _find_product_by_id(products, product_id)

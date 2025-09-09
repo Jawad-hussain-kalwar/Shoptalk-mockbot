@@ -1,6 +1,6 @@
 from typing import Any, Dict, List
 
-from ._shared import load_catalog
+from ._shared import load_catalog, log_tool_call
 
 
 def _matches(product: Dict[str, Any], query: str, tags: List[str]) -> bool:
@@ -14,6 +14,7 @@ def _matches(product: Dict[str, Any], query: str, tags: List[str]) -> bool:
     return all(part in hay for part in q.split())
 
 
+@log_tool_call
 def search_products(query: str, *, category: str | None = None, limit: int = 10) -> List[Dict[str, Any]]:
     products = load_catalog()
     results: List[Dict[str, Any]] = []

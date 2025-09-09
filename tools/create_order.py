@@ -2,9 +2,10 @@ import json
 import os
 import time
 import uuid
+import logging
 from typing import Any, Dict, List, Optional
 
-from ._shared import ROOT, PriceBreakdown
+from ._shared import ROOT, PriceBreakdown, log_tool_call
 
 
 ORDERS_PATH = os.path.join(ROOT, "data", "orders", "orders.json")
@@ -19,11 +20,16 @@ def _read_orders() -> List[Dict[str, Any]]:
 
 def _write_orders(rows: List[Dict[str, Any]]) -> None:
     os.makedirs(os.path.dirname(ORDERS_PATH), exist_ok=True)
-    with open(ORDERS_PATH, "w", encoding="utf-8") as f:
-        json.dump(rows, f, ensure_ascii=False, indent=2)
+    try:
+        with open(ORDERS_PATH, "w", encoding="utf-8") as f:
+            json.dump(rows, f, ensure_ascii=False, indent=2)
+    except Exception:
+        logging.exception("Failed writing orders JSON: %s", ORDERS_PATH)
+        raise
 
 
-def create_order(*, items: List[Dict[str, Any]], destination_city: str | None, destination_country: str | None, breakdown: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+@log_tool_call
+def create_order(*, items: list[dict], destination_city: str, destination_country: str, breakdown: dict) -> dict | None:
     if not items:
         return None
 

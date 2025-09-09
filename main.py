@@ -3,6 +3,8 @@ import sys
 from typing import Any, Dict
 
 from agent.gemini_client import GeminiClient
+from agent.system_prompt import SYSTEM_PROMPT
+from agent.logging_config import init_logging
 from google.genai import types
 from tools import (
     search_products,
@@ -12,6 +14,15 @@ from tools import (
     suggest_alternatives,
     create_order,
     get_order_status,
+    list_supported_destinations,
+    validate_destination,
+    list_categories,
+    list_products_by_category,
+    list_products,
+    list_products_count,
+    list_variants,
+    validate_sku,
+    get_price_for_sku,
 )
 
 
@@ -26,6 +37,7 @@ def _handle_tool_calls(resp: Any, chat: Any) -> Any:
 
 def run() -> None:
     print(WELCOME)
+    init_logging()
     client = GeminiClient()
     chat = client.start_chat()
     tool_functions = [
@@ -36,14 +48,20 @@ def run() -> None:
         suggest_alternatives,
         create_order,
         get_order_status,
+        list_supported_destinations,
+        validate_destination,
+        list_categories,
+        list_products_by_category,
+        list_products,
+        list_products_count,
+        list_variants,
+        validate_sku,
+        get_price_for_sku,
     ]
     common_config = types.GenerateContentConfig(
         tools=tool_functions,
         # Enforce our guardrail via system instruction each turn.
-        system_instruction=(
-            "You are ShopTalk, a concise shopping assistant. Always be brief and clear. "
-            "Use tools when needed. Do not place an order unless the user confirms after an estimate."
-        ),
+        system_instruction=SYSTEM_PROMPT,
     )
     while True:
         try:

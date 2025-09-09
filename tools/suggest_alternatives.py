@@ -1,8 +1,9 @@
 from typing import Any, Dict, List, Optional
 
-from ._shared import load_catalog
+from ._shared import load_catalog, log_tool_call
 
 
+@log_tool_call
 def suggest_alternatives(reference_product_id: str, *, max_price_cents: int | None = None, limit: int = 3) -> List[Dict[str, Any]]:
     products = load_catalog()
     results: List[Dict[str, Any]] = []
