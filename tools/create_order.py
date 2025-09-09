@@ -30,6 +30,17 @@ def _write_orders(rows: List[Dict[str, Any]]) -> None:
 
 @log_tool_call
 def create_order(*, items: list[dict], destination_city: str, destination_country: str, breakdown: dict) -> dict | None:
+    """Create and persist a simple demo order in the local JSON store.
+
+    Args:
+        items: Normalized items with sku, unitPriceCents, currency, quantity.
+        destination_city: Shipping city.
+        destination_country: Shipping country code.
+        breakdown: Price breakdown used for the order record.
+
+    Returns:
+        A dict with orderId and status if created; otherwise None.
+    """
     if not items:
         return None
 

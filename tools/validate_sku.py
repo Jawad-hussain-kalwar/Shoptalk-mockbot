@@ -5,6 +5,14 @@ from ._shared import load_catalog, log_tool_call
 
 @log_tool_call
 def validate_sku(sku: str) -> Dict[str, object]:
+    """Check whether a SKU exists in the catalog.
+
+    Args:
+        sku: Candidate SKU string.
+
+    Returns:
+        Dict with ok (bool) and normalized sku.
+    """
     products = load_catalog()
     sku_norm = (sku or "").strip()
     found = False

@@ -5,6 +5,14 @@ from ._shared import load_catalog, log_tool_call
 
 @log_tool_call
 def list_products(*, limit: int = 20) -> List[Dict[str, Any]]:
+    """List a compact set of product summaries for browsing.
+
+    Args:
+        limit: Maximum number of products to return.
+
+    Returns:
+        A list of products with id, name, category, shortDescription, and tags.
+    """
     products = load_catalog()
     results: List[Dict[str, Any]] = []
     for p in products[:limit]:

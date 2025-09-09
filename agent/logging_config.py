@@ -4,6 +4,11 @@ from logging.handlers import RotatingFileHandler
 
 
 def init_logging() -> None:
+    """Initialize file-based logging once per process.
+
+    Uses a rotating file handler under `logs/app.log` and avoids
+    duplicate handler setup on repeat calls.
+    """
     os.makedirs("logs", exist_ok=True)
     log_path = os.path.join("logs", "app.log")
 

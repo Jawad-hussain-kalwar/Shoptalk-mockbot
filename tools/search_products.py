@@ -16,6 +16,17 @@ def _matches(product: Dict[str, Any], query: str, tags: List[str]) -> bool:
 
 @log_tool_call
 def search_products(query: str, *, category: str | None = None, limit: int = 10) -> List[Dict[str, Any]]:
+    """Search products by free-text query, optionally filtered by category.
+
+    Args:
+        query: Free-text search string; matches name, category, description, and tags.
+        category: Optional category name to restrict results.
+        limit: Maximum number of products to return.
+
+    Returns:
+        A list of product summaries including id, name, category, shortDescription,
+        tags, and basic variant info.
+    """
     products = load_catalog()
     results: List[Dict[str, Any]] = []
     for p in products:

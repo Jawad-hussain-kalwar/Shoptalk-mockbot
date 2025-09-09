@@ -42,35 +42,19 @@ def estimate_price(
     destination_city: str,
     destination_country: str,
 ) -> dict:
-    """
-    Compute a price estimate for a cart to a destination.
+    """Compute a price estimate for a cart to a destination.
 
-    Parameters (the model must fill exactly this structure):
-    - items: array of objects. Each item MUST include:
-      - quantity: integer >= 1
-      And include ONE of the following ways to specify the product:
-      (A) sku: string (preferred). Price is auto-looked-up.
-      (B) unitPriceCents: integer (fallback) if sku is not known.
-      (C) productId + attributes: object; when provided, I will infer sku and price.
+    Args:
+        items: Cart line items with quantity and either sku, unitPriceCents, or productId+attributes.
+        destination_city: Destination city name.
+        destination_country: Destination country code or name; normalized internally.
 
-      Examples:
-      [{"sku": "HP-AUR-100-BLK", "quantity": 1}]
-      [{"productId": "hp-aurora-100", "attributes": {"color": "Black"}, "quantity": 1}]
+    Returns:
+        On success, a dict with normalized items, destination, price breakdown, and deliveryEtaDays.
+        On error, a dict with error message and optional invalidItems list.
 
-    - destination_city: string (e.g., "New York") REQUIRED
-    - destination_country: string (e.g., "US", "UK", "DE", "FR") REQUIRED. I will normalize common variants (e.g., "USA" -> "US").
-
-    Returns: object
-      On success:
-        {
-          items: [{sku, unitPriceCents, currency, quantity}],
-          destinationCity: string,
-          destinationCountry: string,
-          breakdown: {subtotalCents, discountCents, taxCents, shippingCents, totalCents, subtotal, discount, tax, shipping, total},
-          deliveryEtaDays: [minDays, maxDays]
-        }
-      On error:
-        { error: string, invalidItems?: [ {item, reason} ] }
+    Notes:
+        The model uses this function signature for automatic function-calling.
     """
     logger = logging.getLogger(__name__)
     try:

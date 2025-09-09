@@ -73,5 +73,32 @@
     },
     "status": "received",
     "createdAt": "2025-09-09T22:33:01Z"
+  },
+  {
+    "orderId": "be4fad49",
+    "items": [
+      {
+        "quantity": 1,
+        "unitPriceCents": 4999,
+        "currency": "USD",
+        "sku": "MS-PRO-9-GRY"
+      }
+    ],
+    "destinationCity": "Berlin",
+    "destinationCountry": "DE",
+    "breakdown": {
+      "discountCents": 0,
+      "tax": 0,
+      "subtotal": 49.99,
+      "total": 64.99,
+      "totalCents": 6499,
+      "subtotalCents": 4999,
+      "shipping": 15,
+      "taxCents": 0,
+      "discount": 0,
+      "shippingCents": 1500
+    },
+    "status": "received",
+    "createdAt": "2025-09-09T23:16:37Z"
   }
 ]

@@ -1,8 +1,7 @@
-"""
-Centralized system prompt for ShopTalk.
+"""Centralized system prompt for ShopTalk.
 
-This prompt defines the assistant's role, tone, guardrails, and
-high-level operating procedures within the mock ShopTalk terminal shop.
+Defines the assistant's role, tone, guardrails, and high-level tool usage
+procedures for the multi-turn conversational agent demo.
 """
 
 

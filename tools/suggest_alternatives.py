@@ -5,6 +5,16 @@ from ._shared import load_catalog, log_tool_call
 
 @log_tool_call
 def suggest_alternatives(reference_product_id: str, *, max_price_cents: int | None = None, limit: int = 3) -> List[Dict[str, Any]]:
+    """Suggest similar products, preferring same category and within budget if set.
+
+    Args:
+        reference_product_id: Product id to find alternatives for.
+        max_price_cents: Optional max unit price threshold for variants.
+        limit: Maximum number of alternatives to return.
+
+    Returns:
+        A list of alternative product summaries with a representative variant.
+    """
     products = load_catalog()
     results: List[Dict[str, Any]] = []
     ref = next((p for p in products if p.get("id") == reference_product_id), None)
