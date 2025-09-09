@@ -3,9 +3,9 @@ import os
 import time
 import uuid
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
-from ._shared import ROOT, PriceBreakdown, log_tool_call
+from ._shared import ROOT, log_tool_call
 
 
 ORDERS_PATH = os.path.join(ROOT, "data", "orders", "orders.json")

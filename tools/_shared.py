@@ -4,7 +4,7 @@ import os
 import inspect
 from functools import wraps
 from dataclasses import dataclass
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -98,13 +98,6 @@ def _find_product_by_id(products: List[Dict[str, Any]], product_id: str) -> Opti
     for product in products:
         if product.get("id") == product_id:
             return product
-    return None
-
-
-def _find_variant_by_sku(product: Dict[str, Any], sku: str) -> Optional[Dict[str, Any]]:
-    for variant in product.get("variants", []):
-        if variant.get("sku") == sku:
-            return variant
     return None
 
 

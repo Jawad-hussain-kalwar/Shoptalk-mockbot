@@ -1,6 +1,5 @@
 import json
-import sys
-from typing import Any, Dict
+# from typing import Any, Dict
 
 from agent.gemini_client import GeminiClient
 from agent.system_prompt import SYSTEM_PROMPT
@@ -27,12 +26,6 @@ from tools import (
 
 
 WELCOME = "Welcome to ShopTalk! Ask about products, availability, price, or orders. Type 'exit' to quit."
-
-
-def _handle_tool_calls(resp: Any, chat: Any) -> Any:
-    # With automatic function calling enabled by passing Python functions as tools,
-    # the SDK handles calling and resuming. Just return the response.
-    return resp
 
 
 def run() -> None:
@@ -74,7 +67,6 @@ def run() -> None:
         if not user:
             continue
         resp = chat.send_message(user, config=common_config)
-        resp = _handle_tool_calls(resp, chat)
         # Print final text
         try:
             text = resp.text  # type: ignore[attr-defined]

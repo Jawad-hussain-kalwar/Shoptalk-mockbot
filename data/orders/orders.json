@@ -23,5 +23,55 @@
     },
     "status": "received",
     "createdAt": "2025-09-09T20:22:44Z"
+  },
+  {
+    "orderId": "c6a86800",
+    "items": [
+      {
+        "quantity": 1,
+        "sku": "HP-AUR-100-BLK"
+      }
+    ],
+    "destinationCity": "New York",
+    "destinationCountry": "US",
+    "breakdown": {
+      "tax": 9.88,
+      "shippingCents": 700,
+      "taxCents": 988,
+      "subtotalCents": 12999,
+      "discount": 6.5,
+      "total": 140.37,
+      "totalCents": 14037,
+      "discountCents": 650,
+      "shipping": 7,
+      "subtotal": 129.99
+    },
+    "status": "received",
+    "createdAt": "2025-09-09T22:23:35Z"
+  },
+  {
+    "orderId": "219336f5",
+    "items": [
+      {
+        "quantity": 1,
+        "sku": "SW-TRK-LTE-BLK"
+      }
+    ],
+    "destinationCity": "Seattle",
+    "destinationCountry": "US",
+    "breakdown": {
+      "subtotalCents": 14999,
+      "shippingCents": 700,
+      "tax": 11.4,
+      "discount": 7.5,
+      "discountCents": 750,
+      "taxCents": 1140,
+      "totalCents": 16089,
+      "subtotal": 149.99,
+      "shipping": 7,
+      "total": 160.89
+    },
+    "status": "received",
+    "createdAt": "2025-09-09T22:33:01Z"
   }
 ]
