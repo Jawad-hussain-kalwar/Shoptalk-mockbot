@@ -3,7 +3,16 @@ import sys
 from typing import Any, Dict
 
 from agent.gemini_client import GeminiClient
-from agent.tool_bindings import call_local_tool
+from google.genai import types
+from tools import (
+    search_products,
+    get_product_details,
+    check_inventory,
+    estimate_price,
+    suggest_alternatives,
+    create_order,
+    get_order_status,
+)
 
 
 WELCOME = "Welcome to ShopTalk! Ask about products, availability, price, or orders. Type 'exit' to quit."
@@ -19,6 +28,23 @@ def run() -> None:
     print(WELCOME)
     client = GeminiClient()
     chat = client.start_chat()
+    tool_functions = [
+        search_products,
+        get_product_details,
+        check_inventory,
+        estimate_price,
+        suggest_alternatives,
+        create_order,
+        get_order_status,
+    ]
+    common_config = types.GenerateContentConfig(
+        tools=tool_functions,
+        # Enforce our guardrail via system instruction each turn.
+        system_instruction=(
+            "You are ShopTalk, a concise shopping assistant. Always be brief and clear. "
+            "Use tools when needed. Do not place an order unless the user confirms after an estimate."
+        ),
+    )
     while True:
         try:
             user = input("> ").strip()
@@ -29,7 +55,7 @@ def run() -> None:
             break
         if not user:
             continue
-        resp = chat.send_message(user)
+        resp = chat.send_message(user, config=common_config)
         resp = _handle_tool_calls(resp, chat)
         # Print final text
         try:

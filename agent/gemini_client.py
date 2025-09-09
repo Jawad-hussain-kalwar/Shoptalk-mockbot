@@ -2,16 +2,7 @@ import os
 from typing import Any
 
 from dotenv import load_dotenv
-import google.generativeai as genai
-from tools import (
-    search_products,
-    get_product_details,
-    check_inventory,
-    estimate_price,
-    suggest_alternatives,
-    create_order,
-    get_order_status,
-)
+from google import genai
 
 
 SYSTEM_PROMPT = (
@@ -21,27 +12,16 @@ SYSTEM_PROMPT = (
 
 
 class GeminiClient:
-    def __init__(self, model_name: str = "gemini-1.5-flash") -> None:
+    def __init__(self, model_name: str = "gemini-2.0-flash-001") -> None:
         load_dotenv()
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise RuntimeError("GEMINI_API_KEY is not set")
-        genai.configure(api_key=api_key)
-        self._model = genai.GenerativeModel(
-            model_name,
-            tools=[
-                search_products,
-                get_product_details,
-                check_inventory,
-                estimate_price,
-                suggest_alternatives,
-                create_order,
-                get_order_status,
-            ],
-            system_instruction=SYSTEM_PROMPT,
-        )
+        # The google-genai Client reads GEMINI_API_KEY from the environment.
+        self._client = genai.Client()
+        self._model_name = model_name
 
     def start_chat(self) -> Any:
-        return self._model.start_chat(history=[])
+        return self._client.chats.create(model=self._model_name)
 
 
