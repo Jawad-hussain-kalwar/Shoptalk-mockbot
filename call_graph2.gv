@@ -1,0 +1,271 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_263a1ac4 [label="179: to_dict()" name="_shared::PriceBreakdown.to_dict" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f33a931b [label="97: _find_product_by_id()" name="_shared::_find_product_by_id" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b58e92c8 [label="13: _format_for_log()" name="_shared::_format_for_log" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b0191698 [label="111: _inventory_index_by_sku()" name="_shared::_inventory_index_by_sku" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ffe05053 [label="93: _price_to_float_cents()" name="_shared::_price_to_float_cents" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f53afb86 [label="45: _read_json()" name="_shared::_read_json" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0879617d [label="115: find_price_for_sku()" name="_shared::find_price_for_sku" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_edd3c224 [label="153: find_sku_for_product_variant_attributes()" name="_shared::find_sku_for_product_variant_attributes" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_9c8ae3ad [label="78: is_supported_destination()" name="_shared::is_supported_destination" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_863ad4d6 [label="89: list_supported_destinations()" name="_shared::list_supported_destinations" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_033fd425 [label="55: load_catalog()" name="_shared::load_catalog" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5c36b3c8 [label="59: load_inventory()" name="_shared::load_inventory" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_eaa358d6 [label="23: log_tool_call()" name="_shared::log_tool_call" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e830690b [label="146: normalize_country()" name="_shared::normalize_country" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_622308b8 [label="7: check_inventory()" name="check_inventory::check_inventory" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_97f5a6bb [label="14: _read_orders()" name="create_order::_read_orders" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_23db8368 [label="21: _write_orders()" name="create_order::_write_orders" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_12a05c63 [label="32: create_order()" name="create_order::create_order" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_565b043c [label="14: _calc_discount()" name="estimate_price::_calc_discount" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_68c61a15 [label="28: _calc_shipping()" name="estimate_price::_calc_shipping" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_276bef55 [label="21: _calc_tax()" name="estimate_price::_calc_tax" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_01271f6c [label="39: estimate_price()" name="estimate_price::estimate_price" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_dd5572a5 [label="9: __init__()" name="gemini_client::GeminiClient.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f51090c8 [label="18: start_chat()" name="gemini_client::GeminiClient.start_chat" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6fd2c11b [label="12: get_order_status()" name="get_order_status::get_order_status" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_60459a44 [label="7: get_price_for_sku()" name="get_price_for_sku::get_price_for_sku" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2ac77ce2 [label="7: get_product_details()" name="get_product_details::get_product_details" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_c0ea9a12 [label="7: list_categories()" name="list_categories::list_categories" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4d2e4ff2 [label="7: list_products()" name="list_products::list_products" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b861b2a8 [label="7: list_products_by_category()" name="list_products_by_category::list_products_by_category" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c2d1fd63 [label="7: list_products_count()" name="list_products_count::list_products_count" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_532f4db3 [label="7: list_supported_destinations()" name="list_supported_destinations::list_supported_destinations" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9a96423f [label="7: list_variants()" name="list_variants::list_variants" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4002af42 [label="6: init_logging()" name="logging_config::init_logging" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_628e371a [label="0: (global)()" name="main::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b704e5cb [label="32: _handle_tool_calls()" name="main::_handle_tool_calls" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_25ff360b [label="38: run()" name="main::run" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_921db1d1 [label="6: _matches()" name="search_products::_matches" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_40829d67 [label="18: search_products()" name="search_products::search_products" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b282cef1 [label="7: suggest_alternatives()" name="suggest_alternatives::suggest_alternatives" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_21fdfe94 [label="121: call_local_tool()" name="tool_bindings::call_local_tool" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e520e823 [label="7: validate_destination()" name="validate_destination::validate_destination" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7362c20e [label="7: validate_sku()" name="validate_sku::validate_sku" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_263a1ac4 -> node_ffe05053 [color="#F0E442" penwidth="2"];
+node_263a1ac4 -> node_ffe05053 [color="#F0E442" penwidth="2"];
+node_263a1ac4 -> node_ffe05053 [color="#F0E442" penwidth="2"];
+node_263a1ac4 -> node_ffe05053 [color="#F0E442" penwidth="2"];
+node_263a1ac4 -> node_ffe05053 [color="#F0E442" penwidth="2"];
+node_edd3c224 -> node_f33a931b [color="#F0E442" penwidth="2"];
+node_033fd425 -> node_f53afb86 [color="#0072B2" penwidth="2"];
+node_5c36b3c8 -> node_f53afb86 [color="#000000" penwidth="2"];
+node_eaa358d6 -> node_b58e92c8 [color="#D55E00" penwidth="2"];
+node_eaa358d6 -> node_b58e92c8 [color="#D55E00" penwidth="2"];
+node_622308b8 -> node_b0191698 [color="#000000" penwidth="2"];
+node_622308b8 -> node_5c36b3c8 [color="#000000" penwidth="2"];
+node_12a05c63 -> node_97f5a6bb [color="#009E73" penwidth="2"];
+node_12a05c63 -> node_23db8368 [color="#009E73" penwidth="2"];
+node_01271f6c -> node_263a1ac4 [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_0879617d [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_edd3c224 [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_033fd425 [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_e830690b [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_565b043c [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_68c61a15 [color="#F0E442" penwidth="2"];
+node_01271f6c -> node_276bef55 [color="#F0E442" penwidth="2"];
+node_60459a44 -> node_0879617d [color="#F0E442" penwidth="2"];
+node_60459a44 -> node_033fd425 [color="#F0E442" penwidth="2"];
+node_2ac77ce2 -> node_f33a931b [color="#56B4E9" penwidth="2"];
+node_2ac77ce2 -> node_033fd425 [color="#56B4E9" penwidth="2"];
+node_c0ea9a12 -> node_033fd425 [color="#56B4E9" penwidth="2"];
+node_4d2e4ff2 -> node_033fd425 [color="#56B4E9" penwidth="2"];
+node_b861b2a8 -> node_033fd425 [color="#000000" penwidth="2"];
+node_c2d1fd63 -> node_033fd425 [color="#009E73" penwidth="2"];
+node_532f4db3 -> node_863ad4d6 [color="#009E73" penwidth="2"];
+node_9a96423f -> node_f33a931b [color="#CC79A7" penwidth="2"];
+node_9a96423f -> node_033fd425 [color="#CC79A7" penwidth="2"];
+node_628e371a -> node_25ff360b [color="#56B4E9" penwidth="2"];
+node_25ff360b -> node_263a1ac4 [color="#009E73" penwidth="2"];
+node_25ff360b -> node_dd5572a5 [color="#009E73" penwidth="2"];
+node_25ff360b -> node_f51090c8 [color="#009E73" penwidth="2"];
+node_25ff360b -> node_4002af42 [color="#009E73" penwidth="2"];
+node_25ff360b -> node_b704e5cb [color="#009E73" penwidth="2"];
+node_40829d67 -> node_033fd425 [color="#CC79A7" penwidth="2"];
+node_40829d67 -> node_921db1d1 [color="#CC79A7" penwidth="2"];
+node_b282cef1 -> node_033fd425 [color="#E69F00" penwidth="2"];
+node_21fdfe94 -> node_622308b8 [color="#F0E442" penwidth="2"];
+node_21fdfe94 -> node_12a05c63 [color="#F0E442" penwidth="2"];
+node_21fdfe94 -> node_01271f6c [color="#F0E442" penwidth="2"];
+node_21fdfe94 -> node_6fd2c11b [color="#F0E442" penwidth="2"];
+node_21fdfe94 -> node_2ac77ce2 [color="#F0E442" penwidth="2"];
+node_21fdfe94 -> node_40829d67 [color="#F0E442" penwidth="2"];
+node_21fdfe94 -> node_b282cef1 [color="#F0E442" penwidth="2"];
+node_e520e823 -> node_9c8ae3ad [color="#009E73" penwidth="2"];
+node_7362c20e -> node_033fd425 [color="#D55E00" penwidth="2"];
+subgraph cluster_d98a4bb7 {
+    node_b58e92c8 node_eaa358d6 node_f53afb86 node_033fd425 node_5c36b3c8 node_9c8ae3ad node_863ad4d6 node_ffe05053 node_f33a931b node_b0191698 node_0879617d node_e830690b node_edd3c224;
+    label="File: _shared";
+    name="_shared";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_66fe0512 {
+        node_263a1ac4;
+        label="Class: PriceBreakdown";
+        name="PriceBreakdown";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_c45fb348 {
+    node_622308b8;
+    label="File: check_inventory";
+    name="check_inventory";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_5a2a13e3 {
+    node_97f5a6bb node_23db8368 node_12a05c63;
+    label="File: create_order";
+    name="create_order";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_89893d75 {
+    node_565b043c node_276bef55 node_68c61a15 node_01271f6c;
+    label="File: estimate_price";
+    name="estimate_price";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_cb07e7db {
+    label="File: gemini_client";
+    name="gemini_client";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_99c6c704 {
+        node_dd5572a5 node_f51090c8;
+        label="Class: GeminiClient";
+        name="GeminiClient";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_d765179b {
+    node_6fd2c11b;
+    label="File: get_order_status";
+    name="get_order_status";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_49febfd0 {
+    node_60459a44;
+    label="File: get_price_for_sku";
+    name="get_price_for_sku";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_6319830b {
+    node_2ac77ce2;
+    label="File: get_product_details";
+    name="get_product_details";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_fcdc7e0f {
+    node_c0ea9a12;
+    label="File: list_categories";
+    name="list_categories";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_51d480aa {
+    node_4d2e4ff2;
+    label="File: list_products";
+    name="list_products";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_939a4006 {
+    node_b861b2a8;
+    label="File: list_products_by_category";
+    name="list_products_by_category";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_65a31f4e {
+    node_c2d1fd63;
+    label="File: list_products_count";
+    name="list_products_count";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_9c13e3b3 {
+    node_532f4db3;
+    label="File: list_supported_destinations";
+    name="list_supported_destinations";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_be72b819 {
+    node_9a96423f;
+    label="File: list_variants";
+    name="list_variants";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_3f8632c8 {
+    node_4002af42;
+    label="File: logging_config";
+    name="logging_config";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_640c2cf5 {
+    node_b704e5cb node_25ff360b node_628e371a;
+    label="File: main";
+    name="main";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_58fdc871 {
+    node_921db1d1 node_40829d67;
+    label="File: search_products";
+    name="search_products";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_7a39e2a4 {
+    node_b282cef1;
+    label="File: suggest_alternatives";
+    name="suggest_alternatives";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_aa2ea2ee {
+    node_21fdfe94;
+    label="File: tool_bindings";
+    name="tool_bindings";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_d46bab2d {
+    node_e520e823;
+    label="File: validate_destination";
+    name="validate_destination";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_6c2452ed {
+    node_7362c20e;
+    label="File: validate_sku";
+    name="validate_sku";
+    style="filled";
+    graph[style=dotted];
+};
+}
