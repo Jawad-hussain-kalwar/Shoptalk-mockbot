@@ -1,0 +1,155 @@
+[
+  {
+    "id": "hp-aurora-100",
+    "name": "Aurora Wireless Headphones",
+    "category": "Headphones",
+    "shortDescription": "Over-ear Bluetooth headphones with ANC and 40h battery life.",
+    "specs": {
+      "batteryLifeHours": 40,
+      "weightGrams": 260,
+      "connectivity": ["Bluetooth 5.3", "3.5mm"],
+      "anc": true
+    },
+    "variants": [
+      {"sku": "HP-AUR-100-BLK", "attributes": {"color": "Black"}, "listPrice": 12999, "currency": "USD"},
+      {"sku": "HP-AUR-100-WHT", "attributes": {"color": "White"}, "listPrice": 12999, "currency": "USD"}
+    ],
+    "tags": ["wireless", "anc", "over-ear", "audio"]
+  },
+  {
+    "id": "hp-sonic-200",
+    "name": "Sonic Lite Earbuds",
+    "category": "Earbuds",
+    "shortDescription": "True wireless earbuds with IPX5 splash resistance.",
+    "specs": {
+      "batteryLifeHours": 24,
+      "weightGrams": 46,
+      "connectivity": ["Bluetooth 5.2"],
+      "anc": false
+    },
+    "variants": [
+      {"sku": "EB-SON-200-BLK", "attributes": {"color": "Black"}, "listPrice": 5999, "currency": "USD"},
+      {"sku": "EB-SON-200-BLU", "attributes": {"color": "Blue"}, "listPrice": 5999, "currency": "USD"}
+    ],
+    "tags": ["wireless", "earbuds", "sport"]
+  },
+  {
+    "id": "sp-neo-10",
+    "name": "Neo Smart Speaker",
+    "category": "Smart Home",
+    "shortDescription": "Compact smart speaker with voice assistant and room-filling sound.",
+    "specs": {
+      "drivers": "1x 2.5\" full-range",
+      "microphones": 3,
+      "connectivity": ["Wi‑Fi", "Bluetooth 5.0"],
+      "voiceAssistant": true
+    },
+    "variants": [
+      {"sku": "SP-NEO-10-CH", "attributes": {"color": "Charcoal"}, "listPrice": 7999, "currency": "USD"},
+      {"sku": "SP-NEO-10-SN", "attributes": {"color": "Sand"}, "listPrice": 7999, "currency": "USD"}
+    ],
+    "tags": ["smart", "speaker", "assistant"]
+  },
+  {
+    "id": "kb-mech-75",
+    "name": "MechaBoard 75",
+    "category": "Keyboards",
+    "shortDescription": "75% mechanical keyboard with hot‑swap switches and RGB.",
+    "specs": {
+      "layout": "75%",
+      "switchType": ["Linear", "Tactile"],
+      "connection": ["USB-C", "Bluetooth 5.1"],
+      "weightGrams": 820
+    },
+    "variants": [
+      {"sku": "KB-M75-LIN-GRY", "attributes": {"switch": "Linear", "color": "Gray"}, "listPrice": 10999, "currency": "USD"},
+      {"sku": "KB-M75-TAC-WHT", "attributes": {"switch": "Tactile", "color": "White"}, "listPrice": 10999, "currency": "USD"}
+    ],
+    "tags": ["mechanical", "keyboard", "rgb"]
+  },
+  {
+    "id": "ms-pro-9",
+    "name": "Pro Mouse",
+    "category": "Mice",
+    "shortDescription": "Ergonomic wireless mouse with silent clicks and multi‑device pairing.",
+    "specs": {
+      "dpi": 8000,
+      "batteryLifeDays": 90,
+      "connection": ["Bluetooth", "USB Receiver"],
+      "weightGrams": 95
+    },
+    "variants": [
+      {"sku": "MS-PRO-9-GRY", "attributes": {"color": "Gray"}, "listPrice": 4999, "currency": "USD"},
+      {"sku": "MS-PRO-9-ROSE", "attributes": {"color": "Rose"}, "listPrice": 4999, "currency": "USD"}
+    ],
+    "tags": ["mouse", "ergonomic", "silent"]
+  },
+  {
+    "id": "wb-vision-4k",
+    "name": "Vision 27\" 4K Monitor",
+    "category": "Monitors",
+    "shortDescription": "27‑inch UHD display with 99% sRGB and USB‑C power delivery.",
+    "specs": {
+      "resolution": "3840x2160",
+      "refreshRateHz": 60,
+      "ports": ["HDMI 2.1", "DisplayPort 1.4", "USB‑C 65W"],
+      "panel": "IPS"
+    },
+    "variants": [
+      {"sku": "MN-VIS-27-4K-BLK", "attributes": {"color": "Black"}, "listPrice": 32999, "currency": "USD"}
+    ],
+    "tags": ["monitor", "4k", "usb-c"]
+  },
+  {
+    "id": "pb-core-20k",
+    "name": "Core 20K Power Bank",
+    "category": "Power",
+    "shortDescription": "20,000 mAh PD power bank with dual USB‑C ports.",
+    "specs": {
+      "capacityMah": 20000,
+      "maxOutputW": 45,
+      "ports": ["USB‑C", "USB‑A"],
+      "weightGrams": 390
+    },
+    "variants": [
+      {"sku": "PB-CORE-20K-BLK", "attributes": {"color": "Black"}, "listPrice": 6999, "currency": "USD"}
+    ],
+    "tags": ["power", "pd", "portable"]
+  },
+  {
+    "id": "sw-tracker-lite",
+    "name": "Tracker Lite Smartwatch",
+    "category": "Wearables",
+    "shortDescription": "Fitness smartwatch with GPS and 7‑day battery life.",
+    "specs": {
+      "batteryLifeDays": 7,
+      "gps": true,
+      "waterResistance": "5 ATM",
+      "weightGrams": 42
+    },
+    "variants": [
+      {"sku": "SW-TRK-LTE-BLK", "attributes": {"color": "Black"}, "listPrice": 14999, "currency": "USD"},
+      {"sku": "SW-TRK-LTE-RED", "attributes": {"color": "Red"}, "listPrice": 14999, "currency": "USD"}
+    ],
+    "tags": ["fitness", "gps", "smartwatch"]
+  },
+  {
+    "id": "tb-note-11",
+    "name": "Note 11\" Tablet",
+    "category": "Tablets",
+    "shortDescription": "11‑inch tablet with stylus support and 128/256 GB options.",
+    "specs": {
+      "display": "11\" 120Hz",
+      "storageOptions": [128, 256],
+      "ramGB": 8,
+      "connectivity": ["Wi‑Fi", "LTE"]
+    },
+    "variants": [
+      {"sku": "TB-N11-128-GRY", "attributes": {"color": "Gray", "storage": "128GB"}, "listPrice": 34999, "currency": "USD"},
+      {"sku": "TB-N11-256-GRY", "attributes": {"color": "Gray", "storage": "256GB"}, "listPrice": 39999, "currency": "USD"}
+    ],
+    "tags": ["tablet", "stylus", "120hz"]
+  }
+]
+
+

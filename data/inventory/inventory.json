@@ -1,0 +1,28 @@
+[
+  {"sku": "HP-AUR-100-BLK", "stock": 18, "restockEtaDays": null},
+  {"sku": "HP-AUR-100-WHT", "stock": 7, "restockEtaDays": null},
+
+  {"sku": "EB-SON-200-BLK", "stock": 0, "restockEtaDays": 5},
+  {"sku": "EB-SON-200-BLU", "stock": 22, "restockEtaDays": null},
+
+  {"sku": "SP-NEO-10-CH", "stock": 12, "restockEtaDays": null},
+  {"sku": "SP-NEO-10-SN", "stock": 3, "restockEtaDays": null},
+
+  {"sku": "KB-M75-LIN-GRY", "stock": 9, "restockEtaDays": null},
+  {"sku": "KB-M75-TAC-WHT", "stock": 0, "restockEtaDays": 10},
+
+  {"sku": "MS-PRO-9-GRY", "stock": 25, "restockEtaDays": null},
+  {"sku": "MS-PRO-9-ROSE", "stock": 6, "restockEtaDays": null},
+
+  {"sku": "MN-VIS-27-4K-BLK", "stock": 4, "restockEtaDays": null},
+
+  {"sku": "PB-CORE-20K-BLK", "stock": 31, "restockEtaDays": null},
+
+  {"sku": "SW-TRK-LTE-BLK", "stock": 10, "restockEtaDays": null},
+  {"sku": "SW-TRK-LTE-RED", "stock": 0, "restockEtaDays": 7},
+
+  {"sku": "TB-N11-128-GRY", "stock": 8, "restockEtaDays": null},
+  {"sku": "TB-N11-256-GRY", "stock": 2, "restockEtaDays": null}
+]
+
+
